@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 12:18:29 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/13 14:03:29 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/02/21 17:39:21 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,11 @@ typedef struct s_stack
 
 #include "libft/libft.h"
 
+void	ft_check_args_format(char **av);
+void	ft_check_double(t_stack	**stack);
+
 t_stack	*ft_parsing(int ac, char **av);
+void	ft_print_stack(t_stack *stack);
 
 void	ft_stackadd_back(t_stack **stack, t_stack *new);
 void	ft_stackadd_front(t_stack **stack, t_stack *new);
@@ -41,7 +45,12 @@ void	ft_push_b(t_stack **stack_a, t_stack **stack_b);
 
 void	ft_rotatestack_a(t_stack **stack_a);
 void	ft_rotatestack_b(t_stack **stack_b);
+void	ft_rotatestack_r(t_stack **stack_a, t_stack **stack_b);
 
 void	ft_reverserotate_a(t_stack **stack_a);
 void	ft_reverserotate_b(t_stack **stack_b);
+void	ft_reverserotate_r(t_stack **stack_a, t_stack **stack_b);
+
+void	ft_algo(t_stack **stack_a, t_stack **stack_b);
+
 #endif

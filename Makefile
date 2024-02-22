@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2024/02/13 14:04:13 by adjoly           ###   ########.fr        #
+#    Updated: 2024/02/21 17:40:53 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,9 @@ NAME = push_swap
 CC = cc
 
 SRCS = main.c \
+	   algo.c \
+		check_error.c \
+		print_stack.c \
 		parsing.c \
 		stack/ft_stackadd_back.c \
 		stack/ft_stackadd_front.c \

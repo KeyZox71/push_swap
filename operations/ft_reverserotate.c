@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 13:41:25 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/13 14:05:13 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/02/15 13:30:20 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,28 @@ void	ft_reverserotate(t_stack **stack)
 
 void	ft_reverserotate_a(t_stack **stack_a)
 {
+	if (!stack_a || !(*stack_a) || !(*stack_a)->next)
+		return ;
 	ft_putendl_fd("rra", STDOUT_FILENO);
 	ft_reverserotate(stack_a);
 }
 
 void	ft_reverserotate_b(t_stack **stack_b)
 {
+	if (!stack_b || !(*stack_b) || !(*stack_b)->next)
+		return ;
 	ft_putendl_fd("rrb", STDOUT_FILENO);
+	ft_reverserotate(stack_b);
+}
+
+void	ft_reverserotate_r(t_stack **stack_a, t_stack **stack_b)
+{
+	if (!stack_a || !(*stack_a) || !(*stack_a)->next)
+		return ;
+	if (!stack_b || !(*stack_b) || !(*stack_b)->next)
+		return ;
+	ft_putendl_fd("rrr", STDOUT_FILENO);
+	ft_reverserotate(stack_a);
 	ft_reverserotate(stack_b);
 }
 
