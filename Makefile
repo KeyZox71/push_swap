@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2024/02/21 17:40:53 by adjoly           ###   ########.fr        #
+#    Updated: 2024/02/22 11:51:16 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ CC = cc
 
 SRCS = main.c \
 	   algo.c \
+	   median.c \
 		check_error.c \
 		print_stack.c \
 		parsing.c \

@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 10:27:14 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/06 10:28:24 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/02/22 13:31:53 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,3 @@ void	ft_stackdelone(t_stack *stack)
 		return ;
 	free(stack);
 }
-

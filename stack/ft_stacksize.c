@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 11:42:40 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/05 11:44:21 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/02/22 13:29:39 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ size_t	ft_stacksize(t_stack *stack)
 	}
 	return (i);
 }
-

@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 11:40:39 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/05 11:42:15 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/02/22 13:32:31 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,3 @@ void	ft_stackadd_back(t_stack **stack, t_stack *new)
 	}
 	ft_stacklast(*stack)->next = new;
 }
-

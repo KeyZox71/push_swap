@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 12:18:29 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/21 17:39:21 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/02/22 11:50:24 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ void	ft_reverserotate_b(t_stack **stack_b);
 void	ft_reverserotate_r(t_stack **stack_a, t_stack **stack_b);
 
 void	ft_algo(t_stack **stack_a, t_stack **stack_b);
+int		find_median(t_stack **stack);
 
 #endif
