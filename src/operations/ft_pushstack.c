@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:08:51 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/21 17:55:12 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/03/11 15:10:03 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	ft_push_a(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*tmp_a;
-	
+
 	if (!stack_b || !(*stack_b))
 		return ;
 	ft_putendl_fd("pa", STDOUT_FILENO);
@@ -38,4 +38,3 @@ void	ft_push_b(t_stack **stack_a, t_stack **stack_b)
 	tmp_b->next = *stack_b;
 	*stack_b = tmp_b;
 }
-

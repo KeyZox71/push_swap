@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2024/02/22 11:51:16 by adjoly           ###   ########.fr        #
+#    Updated: 2024/03/11 15:45:33 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,11 @@ NAME = push_swap
 
 CC = cc
 
+OBJSDIR = obj/
+
+SRCDIR = src/
+
 SRCS = main.c \
-	   algo.c \
-	   median.c \
 		check_error.c \
 		print_stack.c \
 		parsing.c \
@@ -31,8 +33,13 @@ SRCS = main.c \
 		operations/ft_pushstack.c \
 		operations/ft_rotatestack.c \
 		operations/ft_reverserotate.c \
+		algo/get_min_max.c \
+		algo/algo.c \
+		algo/insertion.c \
+		algo/median.c \
+		utils/is_sorted.c \
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(addprefix $(OBJSDIR), $(SRCS:.c=.o))
 
 FLAGS = -Werror -Wall -Wextra -g
 
@@ -41,21 +48,25 @@ HEADERS = so_long.h
 LIB = libft/libft.a \
 
 $(NAME): $(OBJS)
-	make -C libft
-	$(CC) $(FLAGS) $(OBJS) $(LIB) -o $(NAME)
+	@make -s -C libft
+	@$(CC) $(FLAGS) $(OBJS) $(LIB) -o $(NAME)
+	@echo "[✔] Compiled"
 
-%.o: %.c
-	$(CC) $(FLAGS) -I $(HEADERS) $< -c -o $@
+$(OBJSDIR)%.o: $(SRCDIR)%.c
+	@mkdir -p $(@D)
+	@$(CC) $(FLAGS) -I $(HEADERS) $< -c -o $@
+	@echo "[✔] $< compiled"
 
 all: $(NAME)
 
 clean:
-	make -C libft clean
-	rm -f $(OBJS)
+	@make -s -C libft clean
+	@rm -f $(OBJS)
 
 fclean: clean
-	make -C libft fclean
-	rm -f $(NAME)
+	@make -s -C libft fclean
+	@rm -f $(NAME)
+	@echo "[X] Cleaned"
 
 re: fclean all
 

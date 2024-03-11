@@ -6,40 +6,34 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 13:45:25 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/18 18:30:08 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/03/11 15:56:15 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "push_swap.h"
-#include <stdlib.h>
-#include <unistd.h>
 
 void	ft_check_args_format(char **av)
 {
-	size_t	i;
-	size_t	j;
+	char	**tmp;
+	char	*tmp_av;
 
-	i = 0;
-	av++;
-	while (*av)
+	tmp = av;
+	tmp++;
+	while (*tmp)
 	{
-		j = 0;
-		while (**av)
+		tmp_av = *tmp;
+		while (*tmp_av)
 		{
-			if (!ft_isdigit(**av) && **av != 32 && **av != '-' && **av != '+')
+			if (!ft_isdigit(*tmp_av) && *tmp_av != 32 \
+					&& *tmp_av != '-' && *tmp_av != '+')
 			{
 				ft_putendl_fd("Error", STDERR_FILENO);
 				exit(EXIT_SUCCESS);
 			}
-			j++;
-			(*av)++;
+			tmp_av++;
 		}
-		(*av) -= j;
-		i++;
-		av++;
+		tmp++;
 	}
-	av -= i;
 }
 
 void	ft_check_double(t_stack	**stack)

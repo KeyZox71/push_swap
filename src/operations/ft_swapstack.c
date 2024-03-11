@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 17:55:21 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/15 13:36:44 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/03/11 15:09:06 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_swapstack(t_stack *stack)
 {
 	int	tmp;
-	
+
 	if (!stack)
 		return ;
 	tmp = stack->nb;

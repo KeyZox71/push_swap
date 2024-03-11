@@ -1,44 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   median.c                                           :+:      :+:    :+:   */
+/*   print_stack.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/22 11:27:04 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/22 13:27:41 by adjoly           ###   ########.fr       */
+/*   Created: 2024/02/15 11:05:52 by adjoly            #+#    #+#             */
+/*   Updated: 2024/03/04 12:36:31 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_boolean	is_median(t_stack **stack, int nb)
-{
-	t_stack	*tmp;
-	int		count;
-
-	tmp = *stack;
-	count = 0;
-	while (tmp)
-	{
-		count += (tmp->nb < nb) - (tmp->nb > nb);
-		tmp = tmp->next;
-	}
-	if (count == -1 || count == 0 || count == 1)
-		return (TRUE);
-	return (FALSE);
-}
-
-int	find_median(t_stack **stack)
+void	ft_print_stack(t_stack *stack)
 {
 	t_stack	*tmp;
 
-	tmp = *stack;
+	tmp = stack;
 	while (tmp)
 	{
-		if (is_median(stack, tmp->nb) == TRUE)
-			return (tmp->nb);
+		ft_putnbr(tmp->nb);
+		ft_putchar('\n');
 		tmp = tmp->next;
 	}
-	return (ERROR);
 }

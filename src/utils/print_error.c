@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_stack.c                                      :+:      :+:    :+:   */
+/*   print_error.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/15 11:05:52 by adjoly            #+#    #+#             */
-/*   Updated: 2024/02/15 11:07:42 by adjoly           ###   ########.fr       */
+/*   Created: 2024/03/11 15:47:05 by adjoly            #+#    #+#             */
+/*   Updated: 2024/03/11 15:54:09 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	ft_print_stack(t_stack *stack)
+void	ft_senderror(void)
 {
-	t_stack	*tmp;
-
-	tmp = stack;
-	while (tmp)
-	{
-		ft_putnbr(tmp->nb);
-		ft_putchar('\n');
-		tmp = tmp->next;
-	}
+	ft_putendl_fd("Error", STDOUT_FILENO);
+	exit(EXIT_FAILURE);
 }
