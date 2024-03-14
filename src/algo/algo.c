@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 17:29:26 by adjoly            #+#    #+#             */
-/*   Updated: 2024/03/11 16:06:26 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/03/12 15:37:38 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,13 @@ void	ft_algo(t_stack **stack_a, t_stack **stack_b)
 	}
 	if (ft_stacksize(*stack_a) == 3)
 	{
+		sort_three(stack_a);
+		return ;
 	}
 	if (ft_stacksize(*stack_a) == 5)
 	{
+		sort_five(stack_a, stack_b);
+		return ;
 	}
 	send_to_stack_b(stack_a, stack_b);
 	while_insert(stack_a, stack_b);

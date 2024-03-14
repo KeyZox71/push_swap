@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:49:14 by adjoly            #+#    #+#             */
-/*   Updated: 2024/03/11 16:03:14 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/03/12 14:42:06 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	prepare_to_send_a(t_stack **stack_b, size_t lowest_cost_b)
 {
-	size_t	i;
-
 	if (lowest_cost_b < (ft_stacksize(*stack_b) / 2))
 	{
 		while (stack_b && *stack_b && lowest_cost_b > 0)
@@ -26,7 +24,6 @@ void	prepare_to_send_a(t_stack **stack_b, size_t lowest_cost_b)
 	}
 	else
 	{
-		i = 0;
 		while (stack_b && *stack_b && lowest_cost_b < ft_stacksize(*stack_b))
 		{
 			ft_reverserotate_b(stack_b);

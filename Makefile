@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2024/03/11 15:45:33 by adjoly           ###   ########.fr        #
+#    Updated: 2024/03/13 13:21:22 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,6 @@ OBJSDIR = obj/
 SRCDIR = src/
 
 SRCS = main.c \
-		check_error.c \
 		print_stack.c \
 		parsing.c \
 		stack/ft_stackadd_back.c \
@@ -37,7 +36,9 @@ SRCS = main.c \
 		algo/algo.c \
 		algo/insertion.c \
 		algo/median.c \
+		algo/small_mouv.c \
 		utils/is_sorted.c \
+		utils/print_error.c \
 
 OBJS = $(addprefix $(OBJSDIR), $(SRCS:.c=.o))
 

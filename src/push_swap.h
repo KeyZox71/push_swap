@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 12:18:29 by adjoly            #+#    #+#             */
-/*   Updated: 2024/03/11 16:07:50 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/03/13 14:35:19 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,15 +55,15 @@ void		while_insert(t_stack **stack_a, t_stack **stack_b);
 size_t		get_lowest_cost(t_stack **stack_a, t_stack **stack_b);
 t_boolean	ft_is_sort(t_stack **stack);
 int			find_q_one(t_stack **stack);
+void		sort_three(t_stack	**stack_a);
+void		sort_five(t_stack **stack_a, t_stack **stack_b);
 
 // get_min_max
 size_t		get_stack_max(t_stack **stack);
 size_t		get_stack_min(t_stack **stack);
 
 // error checkin
-void		ft_check_args_format(char **av);
 t_stack		*ft_parsing(char **av);
-void		ft_check_double(t_stack	**stack);
 void		ft_print_stack(t_stack *stack);
 
 // utils
