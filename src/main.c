@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 12:14:22 by adjoly            #+#    #+#             */
-/*   Updated: 2024/03/16 21:01:23 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/03/18 16:51:24 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	check_invalid_char(char **av)
 		{
 			if (!ft_isdigit(*tmp_args) && *tmp_args != '-' \
 					&& *tmp_args != '+' && *tmp_args != 32)
-				ft_senderror();
+				ft_senderror(NULL);
 			tmp_args++;
 		}
 		tmp++;
@@ -45,10 +45,7 @@ void	check_double(t_stack **stack)
 		while (check_dup)
 		{
 			if (check_dup->nb == tmp->nb)
-			{
-				ft_stackclear(stack);
-				ft_senderror();
-			}
+				ft_senderror(stack);
 			check_dup = check_dup->next;
 		}
 		tmp = tmp->next;
@@ -69,9 +66,9 @@ void	check_sign(char **av)
 		{
 			if ((*tmp_av == '-' || *tmp_av == '+') \
 					&& !ft_isdigit(*(tmp_av + 1)))
-				ft_senderror();
+				ft_senderror(NULL);
 			if ((*tmp_av == '-' || *tmp_av == '+') && ft_isdigit(*(tmp_av - 1)))
-				ft_senderror();
+				ft_senderror(NULL);
 			tmp_av++;
 		}
 		tmp++;
@@ -89,7 +86,7 @@ void	check_empty_args(char **av)
 	{
 		tmp_av = *tmp;
 		if (!*tmp_av)
-			ft_senderror();
+			ft_senderror(NULL);
 		while (*tmp_av)
 		{
 			if (*tmp_av != 32)
@@ -97,7 +94,7 @@ void	check_empty_args(char **av)
 			tmp_av++;
 		}
 		if (!*tmp_av)
-			ft_senderror();
+			ft_senderror(NULL);
 		tmp++;
 	}
 }

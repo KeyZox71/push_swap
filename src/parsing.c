@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 12:05:43 by adjoly            #+#    #+#             */
-/*   Updated: 2024/03/16 15:13:43 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/03/18 16:57:06 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,12 @@ void	ft_freearr(char **arr)
 	free(arr);
 }
 
+void	ft_senderror_split(t_stack **stack, char **split)
+{
+	ft_freearr(split);
+	ft_senderror(stack);
+}
+
 t_stack	*ft_parsing(char **av)
 {
 	t_stack	*parsed_data;
@@ -57,7 +63,7 @@ t_stack	*ft_parsing(char **av)
 		{
 			if (ft_nbrlen(*tmp_split) > 11 || ft_atoll(*tmp_split) > 2147483647 \
 					|| ft_atoll(*tmp_split) < -2147483648)
-				ft_senderror();
+				ft_senderror_split(&parsed_data, split);
 			ft_stackadd_back(&parsed_data, ft_stacknew(ft_atoi(*tmp_split)));
 			tmp_split++;
 		}

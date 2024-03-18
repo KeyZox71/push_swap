@@ -6,7 +6,7 @@
 /*   By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 12:18:29 by adjoly            #+#    #+#             */
-/*   Updated: 2024/03/13 14:35:19 by adjoly           ###   ########.fr       */
+/*   Updated: 2024/03/18 16:47:27 by adjoly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,6 @@ void		ft_print_stack(t_stack *stack);
 
 // utils
 t_boolean	ft_is_sort(t_stack **stack);
-void		ft_senderror(void);
+void		ft_senderror(t_stack **stack);
 
 #endif
