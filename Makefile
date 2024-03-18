@@ -6,7 +6,7 @@
 #    By: adjoly <adjoly@student.42angouleme.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 11:03:22 by adjoly            #+#    #+#              #
-#    Updated: 2024/03/13 13:21:22 by adjoly           ###   ########.fr        #
+#    Updated: 2024/03/18 14:35:22 by adjoly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,8 +44,6 @@ OBJS = $(addprefix $(OBJSDIR), $(SRCS:.c=.o))
 
 FLAGS = -Werror -Wall -Wextra -g
 
-HEADERS = so_long.h
-
 LIB = libft/libft.a \
 
 $(NAME): $(OBJS)
@@ -55,7 +53,7 @@ $(NAME): $(OBJS)
 
 $(OBJSDIR)%.o: $(SRCDIR)%.c
 	@mkdir -p $(@D)
-	@$(CC) $(FLAGS) -I $(HEADERS) $< -c -o $@
+	@$(CC) $(FLAGS) $< -c -o $@
 	@echo "[✔] $< compiled"
 
 all: $(NAME)
